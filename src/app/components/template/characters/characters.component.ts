@@ -9,8 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class CharactersComponent implements OnInit {
 
   allCharacters: Array<any> = new Array() 
-  category = '/people';
-  pageNumber = 1;
+  category = 'all.json';
 
   constructor(private dataService: DataService) { }
 
@@ -18,20 +17,10 @@ export class CharactersComponent implements OnInit {
     this.getCharacters();
   }
 
-  nextPage(): void {
-    this.pageNumber = this.pageNumber + 1;
-    this.getCharacters();
-  }
-
-  previewsPage(): void {
-    this.pageNumber = this.pageNumber - 1;
-    this.getCharacters();
-  }
-
   getCharacters(){
-    this.dataService.getData(this.category, this.pageNumber).subscribe(allCharacters => {
-      this.allCharacters = allCharacters.results;
-      console.log(allCharacters);
+    this.dataService.getData(this.category).subscribe(allCharacters => {
+      this.allCharacters = allCharacters;
+      console.log(allCharacters)
     }, err => {
       console.log('Erro ao listar os personagens', err);
     })

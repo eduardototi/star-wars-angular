@@ -12,8 +12,8 @@ export class DataService {
     
   }
 
-  getData(category: string, pageNumber: number) : Observable<any> {
-    return this.http.get(`${environment.apiUrl}` + category + '/?page=' + pageNumber)
+  getData(category: string) : Observable<any> {
+    return this.http.get(`${environment.apiUrl}` + category)
   }
 
 }

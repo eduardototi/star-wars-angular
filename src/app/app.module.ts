@@ -18,7 +18,7 @@ import { ForDirective } from './directives/for.directive';
 import { CharactersComponent } from './components/template/characters/characters.component';
 import { DataService } from './services/data.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { PlanetsComponent } from './components/template/planets/planets.component';
+
 
 
 @NgModule({
@@ -31,7 +31,6 @@ import { PlanetsComponent } from './components/template/planets/planets.componen
     RedDirective,
     ForDirective,
     CharactersComponent,
-    PlanetsComponent,
   ],
   imports: [
     BrowserModule,
