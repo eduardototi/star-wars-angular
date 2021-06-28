@@ -18,6 +18,16 @@ export class CharactersComponent implements OnInit {
     this.getCharacters();
   }
 
+  nextPage(): void {
+    this.pageNumber = this.pageNumber + 1;
+    this.getCharacters();
+  }
+
+  previewsPage(): void {
+    this.pageNumber = this.pageNumber - 1;
+    this.getCharacters();
+  }
+
   getCharacters(){
     this.dataService.getData(this.category, this.pageNumber).subscribe(allCharacters => {
       this.allCharacters = allCharacters.results;
