@@ -1,3 +1,4 @@
+import { ShowComponent } from './views/show/show.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,6 +19,7 @@ import { ForDirective } from './directives/for.directive';
 import { CharactersComponent } from './components/template/characters/characters.component';
 import { DataService } from './services/data.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CharacterComponent } from './components/template/character/character.component';
 
 
 
@@ -31,6 +33,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     RedDirective,
     ForDirective,
     CharactersComponent,
+    CharacterComponent,
+    ShowComponent,
   ],
   imports: [
     BrowserModule,

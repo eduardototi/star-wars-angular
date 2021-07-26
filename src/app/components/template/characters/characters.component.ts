@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharactersComponent implements OnInit {
 
-  allCharacters: Array<any> = new Array() 
+  allCharacters: Array<any> = new Array()
   category = 'all.json';
 
   constructor(private dataService: DataService) { }
@@ -20,7 +20,6 @@ export class CharactersComponent implements OnInit {
   getCharacters(){
     this.dataService.getData(this.category).subscribe(allCharacters => {
       this.allCharacters = allCharacters;
-      console.log(allCharacters)
     }, err => {
       console.log('Erro ao listar os personagens', err);
     })

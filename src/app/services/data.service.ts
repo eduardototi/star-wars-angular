@@ -16,4 +16,9 @@ export class DataService {
     return this.http.get(`${environment.apiUrl}` + category)
   }
 
+  getCharacterById(id: string): Observable<any> {
+    const url = `${environment.apiUrl}/id/${id}.json`
+    return this.http.get<any>(url)
+  }
+
 }
