@@ -1,5 +1,6 @@
 .content {
     padding: 16px;
+    margin-bottom: 60px;
 }
 
 .content > mat-card {
@@ -20,4 +21,8 @@
 mat-card img{
     max-height: 100%;
     max-width: 100%;
+}
+
+.gender {
+    text-transform:capitalize;
 }

@@ -1,6 +1,5 @@
-import { ActivatedRoute, Router } from '@angular/router';
-import { DataService } from './../../../services/data.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 @Component({
@@ -10,29 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterComponent implements OnInit {
 
-  character: Array<any> = new Array()
-  characterData: Array<any> = new Array()
-  characterAffiliations: Array<any> = new Array()
-  characterImage: any;
-
-  constructor(private dataService: DataService,
-              private router: Router,
-              private route: ActivatedRoute) { }
+  constructor(public dialogRef: MatDialogRef<CharacterComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit(): void {
-   this.getOneCharacter()
+    this.getCharacterData()
   }
 
-  getOneCharacter(): void {
-    const id = this.route.snapshot.paramMap.get("id") || ''
-    this.dataService.getCharacterById(id).subscribe(character => {
-      this.character = character
-      this.characterData.push(character.name, character.height, character.mass, character.gender)
-      this.characterAffiliations = character.affiliations
-      this.characterImage = character.image
-      console.log(this.character)
-      console.log(this.characterAffiliations)
-    });
+  getCharacterData(): void {
+    console.log(this.data)
   }
 
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }

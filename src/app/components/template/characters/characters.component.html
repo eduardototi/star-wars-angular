@@ -5,22 +5,22 @@
           <mat-card-header>
             <mat-card-title>{{character.name}}</mat-card-title>
           </mat-card-header>
-          <mat-card-content style="margin-left: 15px;">
-            <p>
-              Sexo: {{character.gender}}
+          <mat-card-content style="margin-left: 15px; margin-top: 15px;">
+            <p class="gender">
+              Gender: {{character.gender}}
             </p>
             <p>
-              Altura: {{character.height}}
+              Height: {{character.height}} m
             </p>
             <p>
-              Planeta: Em breve
+              Planet: Em breve
             </p>
             <div class="img">
               <img mat-card-md-image src="{{character.image}}">
             </div>
           </mat-card-content>
           <mat-card-actions style="text-align: center;">
-            <button mat-button routerLink="show/{{character.id}}">SHOW</button>
+            <button mat-button (click)="openDialog(character)">SHOW</button>
           </mat-card-actions>
         </mat-card>
       </div>

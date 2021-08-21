@@ -1,19 +1,8 @@
 
 <div class="content">
-  <div class="characterData">
-    <h1> Este é o personagem escolhido</h1>
-    <p>Name: {{characterData[0]}}</p>
-    <p>Height: {{characterData[1]}}</p>
-    <p>Mass: {{characterData[2]}}</p>
-    <p>Gender: {{characterData[3]}}</p>
-  </div>
-  <div class="image">
-    <img src="{{characterImage}}" alt="" height="300vh" width="300vh" class="img">
-  </div>
-  <div class="affiliations">
-    <p>Affiliations: </p>
-    <ul *ngFor="let affiliation of characterAffiliations">
-      <p>{{affiliation}}</p>
-    </ul>
+  <img src="{{data.image}}" alt="{{data.name}}" height="100rem" width="100rem">
+  <div></div>
+  <div class="mat-elevation-z8">
+    <button mat-button (click)="onNoClick()">Close</button>
   </div>
 </div>

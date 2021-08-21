@@ -20,6 +20,8 @@ import { CharactersComponent } from './components/template/characters/characters
 import { DataService } from './services/data.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CharacterComponent } from './components/template/character/character.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 
@@ -46,6 +48,7 @@ import { CharacterComponent } from './components/template/character/character.co
     MatCardModule,
     HttpClientModule,
     FlexLayoutModule,
+    MatDialogModule,
   ],
   providers: [ DataService, HttpClientModule ],
   bootstrap: [AppComponent]

@@ -1,34 +1,15 @@
 
 .content {
     display: flex;
-    justify-content: space-around;
     background-color: black;
     flex-direction: column;
     padding: 2vh;
+    margin-bottom: 70px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border: 1px solid yellow;
 }
 
-.characterData {
-    border: 1px solid chartreuse;
-    padding: 2.5vh;
-    width: 50%;
-}
-
-h1 {
-    font-size: 35px;
-}
-
-.image {
-    width: 50%;
-    display: flex;
-    align-self: center;
-    padding: 2.5vh;
-}
-.img {
-    align-self: center;
-    border: 1px solid chartreuse;
-}
-
-.affiliations {
-    border: 1px solid chartreuse;
-    padding: 2.5vh;
+button {
+    width: 100%;
 }
