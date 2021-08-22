@@ -1,14 +1,16 @@
 
 .content {
     display: flex;
-    background-color: black;
+    background-color: #161616;
+    opacity: 0.8;
     flex-direction: row;
     padding: 2vh;
     margin-bottom: 70px;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    border: 1px solid yellow;
+    box-shadow: 1px 1px 3px yellow;
     flex-wrap: nowrap;
+    font-size: 1rem;
 }
 
 
@@ -42,7 +44,13 @@
     flex-direction: row;
 }
 
-button {
-    height: 3rem;
-    width: 100%;
+.div-button {
+    text-align: center;
+}
+
+.button {
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .3rem;
+    box-shadow: 1px 1px 3px yellow;
 }

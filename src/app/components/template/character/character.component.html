@@ -1,7 +1,7 @@
 
-<div class="content">
+<div class="content mat-elevation-z4">
   <div class="image">
-    <img src="{{data.image}}" alt="{{data.name}}" height="auto">
+    <img src="{{data.image}}" alt="{{data.name}}" height="200rem" width="200rem">
   </div>
   <div class="character-infos">
     <span *ngIf="data.name">Name: {{data.name}}</span>
@@ -50,6 +50,6 @@
 
 </div>
 
-<div class="mat-elevation-z8">
-  <button mat-button (click)="onNoClick()">Close</button>
+<div class="div-button">
+  <button mat-button (click)="onNoClick()" class="button mat-elevation-z4">Close</button>
 </div>

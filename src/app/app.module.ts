@@ -21,6 +21,7 @@ import { DataService } from './services/data.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CharacterComponent } from './components/template/character/character.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -49,6 +50,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     HttpClientModule,
     FlexLayoutModule,
     MatDialogModule,
+    NgxPaginationModule,
   ],
   providers: [ DataService, HttpClientModule ],
   bootstrap: [AppComponent]

@@ -26,3 +26,13 @@ mat-card img{
 .gender {
     text-transform:capitalize;
 }
+
+.pagination {
+    text-align: center;
+}
+
+.button {
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .3rem;
+}

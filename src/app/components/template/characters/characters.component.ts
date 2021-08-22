@@ -1,6 +1,5 @@
-import { Observable } from 'rxjs';
 import { DataService } from './../../../services/data.service';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CharacterComponent } from '../character/character.component';
 
@@ -9,9 +8,11 @@ import { CharacterComponent } from '../character/character.component';
   templateUrl: './characters.component.html',
   styleUrls: ['./characters.component.css']
 })
+
 export class CharactersComponent implements OnInit {
   allCharacters: Array<any> = new Array()
   category = 'all.json';
+  public paginaAtual = 1;
 
   constructor(private dataService: DataService,
               public dialog: MatDialog) { }
