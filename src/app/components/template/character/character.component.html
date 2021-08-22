@@ -1,8 +1,55 @@
 
 <div class="content">
-  <img src="{{data.image}}" alt="{{data.name}}" height="100rem" width="100rem">
-  <div></div>
-  <div class="mat-elevation-z8">
-    <button mat-button (click)="onNoClick()">Close</button>
+  <div class="image">
+    <img src="{{data.image}}" alt="{{data.name}}" height="auto">
   </div>
+  <div class="character-infos">
+    <span *ngIf="data.name">Name: {{data.name}}</span>
+    <span *ngIf="data.gender">Gender: {{data.gender}}</span>
+    <span *ngIf="data.height">Height: {{data.height}}</span>
+    <span *ngIf="data.homeworld">Homeworld: {{data.homeworld}}</span>
+    <span *ngIf="data.mass">Mass: {{data.mass}}</span>
+    <span *ngIf="data.manufacturer">Manufacturer: {{data.manufacturer}}</span>
+    <span *ngIf="data.model">Model: {{data.model}}</span>
+    <span *ngIf="data.platingColor">Plating Color: {{data.platingColor}}</span>
+    <span *ngIf="data.species">Specie: {{data.species}}</span>
+    <span *ngIf="data.skinColor">Skin Color: {{data.skinColor}}</span>
+    <span *ngIf="data.born">Born: {{data.born}}</span>
+    <span *ngIf="data.class">Class: {{data.class}}</span>
+    <span *ngIf="data.creator">Creator: {{data.creator}}</span>
+    <span *ngIf="data.dateCreated">Created date: {{data.dateCreated}}</span>
+    <span *ngIf="data.dateDestroyed">Destroy date: {{data.dateDestroyed}}</span>
+    <span *ngIf="data.destroyedLocation">Destroy location: {{data.destroyedLocation}}</span>
+    <span *ngIf="data.equipment">Equipment: {{data.equipment}}</span>
+    <span *ngIf="data.eyeColor">Eye Color: {{data.eyeColor}}</span>
+    <span *ngIf="data.wiki">Link: <a href="">{{data.wiki}}</a></span>
+  </div>
+
+  <div class="teste">
+    <div *ngIf="data.affiliations && data.affiliations.length > 0" class="affiliations">Affiliations
+      <span *ngFor="let affiliation of data.affiliations" >
+        Name: {{affiliation}}
+      </span>
+    </div>
+    <div *ngIf="data.apprentices && data.apprentices.length > 0" class="apprentices">Apprentices
+      <span *ngFor="let apprentice of data.apprentices" >
+        Name: {{apprentice}}
+      </span>
+    </div>
+    <div *ngIf="data.masters && data.masters.length > 0" class="masters">Masters
+      <span *ngFor="let master of data.masters">
+        Name: {{master}}
+      </span>
+    </div>
+    <div *ngIf="data.masters && data.formerAffiliations.length > 0" class="form-affiliations">Former Affiliations
+      <span *ngFor="let formerAffiliation of data.formerAffiliations" >
+        Name: {{formerAffiliation}}
+      </span>
+    </div>
+  </div>
+
+</div>
+
+<div class="mat-elevation-z8">
+  <button mat-button (click)="onNoClick()">Close</button>
 </div>

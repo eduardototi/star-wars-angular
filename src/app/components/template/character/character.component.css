@@ -2,14 +2,47 @@
 .content {
     display: flex;
     background-color: black;
-    flex-direction: column;
+    flex-direction: row;
     padding: 2vh;
     margin-bottom: 70px;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
     border: 1px solid yellow;
+    flex-wrap: nowrap;
+}
+
+
+.character-infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.affiliations {
+    display: flex;
+    flex-direction: column;
+}
+
+.apprentices {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-affiliations {
+    display: flex;
+    flex-direction: column;
+}
+
+.masters {
+    display: flex;
+    flex-direction: column;
+}
+
+.teste {
+    display: flex;
+    flex-direction: row;
 }
 
 button {
+    height: 3rem;
     width: 100%;
 }

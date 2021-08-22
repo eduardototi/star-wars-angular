@@ -33,7 +33,6 @@ export class CharactersComponent implements OnInit {
       width: '100%',
       data: _character
     });
-    console.log(_character)
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
